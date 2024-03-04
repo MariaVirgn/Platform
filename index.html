@@ -1,80 +1,68 @@
 <!DOCTYPE html>
 <head>
-<title>MariaVirginia</title>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/*body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: rgb(165, 159, 200);
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 200; /* only for demonstration, should be removed */
-  background: #ffffff;
-  padding: 20px;
-}
-/* Style the list inside the menu */
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
-/* Clear floats after the columns */
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;   
-  text-align: center;
-  color: white;
-}
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Nia's Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>
-  <h2>Hi, i'm Maria Virginia</h2>
-</header>
-<section>
-  <nav>
-  <p style = "text-align:center;"><img src="Profile.jpg" alt="Maria Virginia" width="200"></p>   
-  </nav>
-  <article>
-    <h1><b>About me</b></h1>
-<p>Perkenalkan nama saya <strong>Maria Virginia</strong>.Saya lahir di Pontianak, 18 Mei 2004 dan saat ini saya adalah Mahasiswa Universitas Sanata Dharma dari program studi <i>informatics</i></p>
-<p>Berikut adalah riwayat pendidikan saya : </p>
-<ul>
-  <li>SD : SD Kanisius Pontianak</li>
-  <li>SMP : SMP Bruder Pontianak</li>
-  <li>SMA : SMAN 5 Pontianak</li>
-</ul>
-<p>Saya mempunyai hobi Menonton film dan mendengarkan musik </p> 
-</article>
 
-<footer>
-<p>klik <a href="https://www.instagram.com/p/C1A2PnZyThQtyRLIgoYEll2aS_eigcP5iuIY3o0/?igsh=MW9lZmJ1MDdzOTQ0ZQ==">disini</a> untuk mengetahui instagram saya </p>
-</footer>
+<div class="navigasi">
+  <div class="logo">
+     <h2>Get To Know Me </h2>
+  </div>
+
+  <div class="menu">
+     <ul>
+      <li><a href="#Hai"></a></li>
+      <li><a href="#Pendidikan"></a></li>
+      <li><a href="#More About Me"></a></li>
+      <li><a href="#Contact"></a></li>
+     </ul>
+  </div>
+</div>
+
+<div class="banner" id="Hai">
+  <img src="gambar/Profile.jpg">
+  <h1>Hi , I'm Maria Virginia</h1>
+
+  <a href=""><button>More</button></a>
+</div>
+
+<div class="boxpendidikan" id="Pendidikan">
+  <h1>Riwayat Pendidikan</h1>
+
+    <div class="sd">
+      <img src="gambar/sd logo.png">
+      <p><h3>SD</h3></p>
+      <p>Pada Tahun 2010 saya bersekolah di SD Bruder Kanisius Pontianak</p>
+  </div>
+
+    <div class="smp">
+      <img src="gambar/smp.jpeg">
+      <p><h3>SMP </h3></p>
+      <p>Pada Tahun 2016 saya bersekolah di SMP Bruder Pontianak</p>
+  </div>
+
+    <div class="sma">
+      <img src="gambar/sma.jpeg">
+      <p><h3>SMA</h3></p>
+      <p>Pada Tahun 2019 saya bersekolah di SMAN 5 Pontianak</p>
+  </div>
+</div>
+
+  <div class="boxmore" id="More About Me">
+    <h1>More About Me </h1>
+
+    <div class="more" id="More">
+      <p>Hai, Nama saya Maria Virginia , Saya lahir di Pontianak 18 mei 2004. Saya adalah anak pertama
+        dari 2 bersaudara. Menonton film dan mendengarkan musik adalah hobi saya.</p>
+  </div>
+</div>
+
+<div class="boxcontact" id="Contact">
+  <h1>Instagram</h1>
+  <img src="gambar/ig.png">
+  <p>klik <a href="https://www.instagram.com/p/C1A2PnZyThQtyRLIgoYEll2aS_eigcP5iuIY3o0/?igsh=MW9lZmJ1MDdzOTQ0ZQ==">disini</a> untuk mengetahui instagram saya </p>
+</div>
 
 </body>
 </html>
