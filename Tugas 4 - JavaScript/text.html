@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas 4</title>
+    <link rel="stylesheet" type="text/css" href="desain.css">
 </head>
 <body>
+
 <div class="banner">
     <h1>Maria Virginia</h1>
     <h2>225314007</h2>
-    <img src="gambar/sikidang.jpg">
-
+    <img src="Profile.jpg">
 </div>
 
+<form id="inputForm">
+    <label for="name">Nama :</label>
+    <input type="text" id="name" required>
+
+    <label for="quantity">Jumlah Pilihan :</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <button type="button" onclick="showOptions()">OK</button>
+</form>
+
+<div id="options">
+    <h2>Pilihan :</h2>
+    <form id="optionsForm" onsubmit="showResult(); return false;">
+        <!-- Options will be dynamically added here using JavaScript -->
+        <button type="submit">OK</button>
+    </form>
+</div>
+
+<div id="result">
+    <h2>Hasil :</h2>
+    <p id="resultText"></p>
+</div>
+
+<script scr="script.js"></script>
 </body>
