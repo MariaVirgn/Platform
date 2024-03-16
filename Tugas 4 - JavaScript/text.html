@@ -14,25 +14,30 @@
 <form id="inputForm">
     <label for="name">Nama :</label>
     <input type="text" id="name" required>
-
+  
     <label for="quantity">Jumlah Pilihan :</label>
     <input type="number" id="quantity" min="1" required>
-
+  
+    <label for="optionType">Tipe Pilihan:</label>
+    <select id="optionType">
+      <option value="radio">Radio Button</option>
+      <option value="dropdown">Drop Down</option>
+    </select>
+  
     <button type="button" onclick="showOptions()">OK</button>
-</form>
-
-<div id="options">
+  </form>
+  
+  <div id="options">
     <h2>Pilihan :</h2>
-    <form id="optionsForm" onsubmit="showResult(); return false;">
-        <!-- Options will be dynamically added here using JavaScript -->
-        <button type="submit">OK</button>
-    </form>
-</div>
-
-<div id="result">
+    <form id="optionsForm" onsubmit="return validateOptions();">
+      </form>
+  </div>
+  
+  <div id="result">
     <h2>Hasil :</h2>
     <p id="resultText"></p>
-</div>
-
-<script scr="script.js"></script>
-</body>
+  </div>
+  
+  <script src="script.js"></script>
+  </body>
+  </html>
