@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f0f0;
+        overflow-x: hidden;
+      }
+
+      .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("backgroundtugas.jpeg");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+
+      .content {
+        padding: 20px;
+        margin-top: 100px;
+        color: #000000;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      .navbar-nav .nav-link {
+        color: rgb(0, 0, 0);
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link.active:hover,
+      .navbar-nav .nav-link.active:focus {
+        color: rgb(132, 137, 145);
+      }
+      .banner {
+        background-color: #ffffffb6; /* Warna latar belakang */
+        color: #ff8989; /* Warna teks */
+        padding: 10px 20px; /* Padding */
+        text-align: center; /* Posisi teks di tengah */
+      }
+      .banner h1 {
+        font-style: initial;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Beranda.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kisahku.html">Kisahku</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pendidikan.html">Pendidikan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="1.html">Tugas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="background-image"></div>
+      <div class="container mt-5">
+        <div class="banner">
+          <h1 class="text-center">Pilihan Hobi</h1>
+        </div>
+        <form id="hobbiesForm">
+          <div id="hobbiesList"></div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Mengambil nilai nama-nama hobi dari URL query parameter
+        var urlParams = new URLSearchParams(window.location.search);
+        var hobbies = urlParams.getAll("hobby");
+
+        // Menampilkan pilihan hobi sesuai dengan data yang diterima
+        hobbies.forEach(function (hobby) {
+          $("#hobbiesList").append(
+            '<div class="form-check">' + '<input class="form-check-input" type="checkbox" value="' + hobby + '" id="' + hobby + '">' + '<label class="form-check-label" for="' + hobby + '">' + hobby + "</label>" + "</div>"
+          );
+        });
+
+        $("#hobbiesForm").submit(function (event) {
+          event.preventDefault();
+          var selectedHobbies = [];
+          // Mengumpulkan hobi yang dipilih oleh pengguna
+          $("input[type=checkbox]:checked").each(function () {
+            selectedHobbies.push($(this).val());
+          });
+          // Redirect ke halaman keempat dengan menyertakan data dari halaman 1, 2, dan 3
+          window.location.href = "4.html?" + window.location.search + "&selectedHobby=" + selectedHobbies.join("&selectedHobby=");
+        });
+      });
+    </script>
+  </body>
+</html>

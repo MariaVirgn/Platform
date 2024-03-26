@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendidikan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min/css" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f0f0;
+        overflow-x: hidden;
+      }
+      .content {
+        padding: 20px;
+        margin-top: 100px;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      img {
+        max-width: 80%;
+        height: auto;
+      }
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      .navbar-nav .nav-link {
+        color: rgb(0, 0, 0);
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link.active:hover,
+      .navbar-nav .nav-link.active:focus {
+        color: rgb(132, 137, 145);
+      }
+
+      .table {
+        border: 1px solid #000000; /* Added table border */
+        background-color: transparent;
+        border-collapse: collapse; /* Collapse borders between cells */
+      }
+
+      .table td {
+        border: 1px solid #000000; /* Add border to each cell */
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+      }
+      .table th {
+        border: 1px solid #000000; /* Add border to each cell */
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+      }
+      .table td,
+      .table th {
+        text-align: left;
+        font-family: "Montserrat", sans-serif;
+      }
+      .banner {
+        background-color: #959ba1; /* Warna latar belakang */
+        color: #ffffff; /* Warna teks */
+        padding: 10px 20px; /* Padding */
+        text-align: center; /* Posisi teks di tengah */
+      }
+      .banner h1 {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Beranda.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kisahku.html">Kisahku</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Pendidikan.html">Pendidikan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="1.html">Tugas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <h1 class="text-center">Pendidikan</h1>
+    </div>
+    <div class="container mt-5">
+      <table class="table table-responsive table-bordered border-dark table-hover text-center text-capitalize">
+        <tr class="table-dark table-active text-uppercase text-white">
+          <th>Tahun</th>
+          <th>Nama Sekolah</th>
+          <th>Alamat Sekolah</th>
+        </tr>
+        <tr>
+          <td>2008-2010</td>
+          <td>TK Kanisius Pontianak</td>
+          <td>Jl.Gusti Situt Mahmud</td>
+        </tr>
+        <tr>
+          <td>2010-2016</td>
+          <td>SD Bruder Kanisius Pontianak</td>
+          <td>Jl.Gusti Situt Mahmud</td>
+        </tr>
+        <tr>
+          <td>2016-2019</td>
+          <td>SMP Bruder Pontianak</td>
+          <td>Jl.Arif Rahman Hakim</td>
+        </tr>
+        <tr>
+          <td>2019-2022</td>
+          <td>SMAN 5 Pontianak</td>
+          <td>Jl.SMU 5 Gg Damai</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>
